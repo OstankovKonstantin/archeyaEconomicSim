@@ -64,6 +64,20 @@
     <Analyzer Include="packages\StyleCop.Analyzers.1.1.118\analyzers\dotnet\cs\StyleCop.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.Unity.Analyzers">
+      <HintPath>C:\Program Files\Microsoft Visual Studio\2022\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.SourceGenerators">
+      <HintPath>D:\UnityPort\2023.2.10f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.SourceGenerators.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.Properties.SourceGenerator">
+      <HintPath>D:\UnityPort\2023.2.10f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll</HintPath>
+    </Reference>
+    <Reference Include="Unity.UIToolkit.SourceGenerator">
+      <HintPath>D:\UnityPort\2023.2.10f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.UIToolkit.SourceGenerator.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
     <PackageReference Include="StyleCop.Analyzers" Version="1.1.118" />
   </ItemGroup>
   <ItemGroup>
