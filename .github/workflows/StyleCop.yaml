@@ -21,7 +21,7 @@ jobs:
       - name: Install StyleCop.Analyzers
         run: |
           dotnet add package StyleCop.Analyzers --version 1.1.118
-          dotnet restore archeyaEconomicSim/
+          dotnet restore Assembly-CSharp.csproj
 
       - name: C# Check Style
         run: |
