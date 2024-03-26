@@ -13,10 +13,10 @@ jobs:
       - name: Git clone repo
         uses: actions/checkout@v2
 
-      - name: Setup .NET Framework
+      - name: Setup .NET Core
         uses: actions/setup-dotnet@v1
         with:
-          dotnet-version: '4.7.1'
+          dotnet-version: '6.0.x'
 
       - name: Install StyleCop.Analyzers
         run: |
