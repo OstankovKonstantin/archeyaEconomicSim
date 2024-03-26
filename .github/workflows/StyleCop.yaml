@@ -1,0 +1,30 @@
+﻿name: StyleCop
+
+on: [push]
+
+jobs:
+  stylecop:
+    name: Run StyleCop
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 'latest'
+
+    - name: Install StyleCopAnalyzers
+      run: dotnet tool install StyleCop.Analyzers --tool-path ./.stylecop
+
+    - name: Run StyleCop
+      run: |
+        ./.stylecop/dotnet tool run dotnet-stylecop analyze --report-path=stylecop-results.xml
+
+    - name: Upload StyleCop results
+      uses: actions/upload-artifact@v2
+      with:
+        name: stylecop-results
+        path: stylecop-results.xml
