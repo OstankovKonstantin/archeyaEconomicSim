@@ -30,5 +30,4 @@ jobs:
 
       - name: C# Check Style
         run: |
-          dotnet build
-          dotnet stylecop
+          dotnet build /p:StyleCopEnabled=true
